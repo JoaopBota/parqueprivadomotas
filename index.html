@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -86,18 +87,20 @@
 						<div class="inner">
 							<section>
 								<h2>Entre em Contacto</h2>
-								<form method="post" action="#">
+								<form method="post" action="contact.php">
 									<div class="fields">
 										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Nome" />
+											<input type="text" name="name" id="name" placeholder="Nome" required />
 										</div>
 										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
+											<input type="email" name="email" id="email" placeholder="Email" required />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" placeholder="Mensagem"></textarea>
+											<textarea name="message" id="message" placeholder="Mensagem" required></textarea>
 										</div>
 									</div>
+									<!-- Google reCAPTCHA -->
+									<div class="g-recaptcha" data-sitekey="6LeFtCcqAAAAAJFOlWOb43gwXyPgmWi-6VfxcpRE"></div>
 									<ul class="actions">
 										<li><input type="submit" value="Enviar" class="primary" /></li>
 									</ul>
