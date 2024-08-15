@@ -2529,7 +2529,7 @@ input, select, textarea {
 		.button.primary {
 			box-shadow: none;
 			background-color: #a74343;
-			color: #ffffff !important;
+			color: #a74343 !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2545,7 +2545,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #ee5f81;
+				background-color: #C0392B;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
