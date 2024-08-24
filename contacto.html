@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Parque Privado de Motas</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        .phone-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff6600; /* Cor de destaque */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/logo.svg" alt="Logotipo do Parque de Motas"></span>
+                    <span class="title">Parque Privado para Motas</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <header>
+                    <h1>Contacte-nos</h1>
+                </header>
+
+                <!-- Mapa -->
+                <section>
+                    <h2>Localização e Contacto</h2>
+                    <div>
+                        <section class="tiles">
+                            <article class="style1 iframe">
+
+                                <iframe
+                                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d397.58785438920506!2d-8.014297864418028!3d37.13598429999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ab1da1642d2e9%3A0x5b096db6552658bf!2sParque%20Privado%20Motas!5e0!3m2!1sen!2spt!4v1723746010752!5m2!1sen!2spt"
+                                  width="1000"
+                                  height="600"
+                                  style="border: 0"
+                                  allowfullscreen=""
+                                  loading="lazy"
+                                  referrerpolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                
+                            </article>      
+                        </section>
+                                        
+                    </div>
+                    <p class="phone-number">Telefone: <a href="tel:+351920132081">+351 920132081</a></p>
+                </section>
+
+                <!-- Formulário de Contacto -->
+                <section>
+                    <h2>Envie-nos uma Mensagem</h2>
+                    <form method="POST" action="https://formspree.io/f/xpwalqbl" onsubmit="return validateRecaptcha();">
+                        <div class="fields">
+                            <div class="field half">
+                                <input type="text" name="name" id="name" placeholder="Nome" required />
+                            </div>
+                            <div class="field half">
+                                <input type="email" name="email" id="email" placeholder="Email" required />
+                            </div>
+                            <div class="field">
+                                <textarea name="message" id="message" placeholder="Mensagem" required></textarea>
+                            </div>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LcQtScqAAAAALlzVzVzq5cFQ-uy7xv-Qo_2oU9A"></div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Enviar" class="primary" /></li>
+                        </ul>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Siga-nos</h2>
+                    <ul class="icons">
+                        <li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Parque Privado de Motas. Todos os direitos reservados.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function validateRecaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+                alert("Por favor, verifique o reCAPTCHA.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

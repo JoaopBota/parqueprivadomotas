@@ -39,6 +39,7 @@
               videovigilância 24 horas, acesso inteligente e total
               tranquilidade.
             </p>
+            <a href="contacto.html" class="button primary">Entre em Contacto</a>
             <h2 style="color: #666; font-weight: bold">
               Apenas 80 euros mês por mota
             </h2>
@@ -122,10 +123,10 @@
         <div class="inner">
           <section>
             <h2>Entre em Contacto</h2>
-            <form method="POST" action="https://formspree.io/f/xpwalqbl">
+            <form method="POST" action="https://formspree.io/f/xpwalqbl" onsubmit="return validateRecaptcha();">
               <div class="fields">
                 <div class="field half">
-                  <input type="text" name="name" id="name" placeholder="Nome" />
+                  <input type="text" name="name" id="name" placeholder="Nome" required/>
                 </div>
                 <div class="field half">
                   <input
@@ -133,6 +134,7 @@
                     name="email"
                     id="email"
                     placeholder="Email"
+                    required
                   />
                 </div>
                 <div class="field">
@@ -140,6 +142,7 @@
                     name="message"
                     id="message"
                     placeholder="Mensagem"
+                    required
                   ></textarea>
                 </div>
               </div>
@@ -188,5 +191,15 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      function validateRecaptcha() {
+          var response = grecaptcha.getResponse();
+          if (response.length === 0) {
+              alert("Por favor, verifique o reCAPTCHA.");
+              return false;
+          }
+          return true;
+      }
+  </script>
   </body>
 </html>
